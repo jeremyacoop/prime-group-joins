@@ -6,7 +6,7 @@
 -- Get all orders and their line items (orders, quantity and product).
   SELECT *, "line_items".*, "orders".* FROM "products"
   JOIN "line_items" ON "orders".id = "line_items".product_id
-  JOIN "warehouse_product" ON "products".id = "warehouse_product".product_id;
+  JOIN "warehouse_product" ON "products".id = "warehouse_product".product_id; (not working)
 
 -- Which warehouses have cheetos?
   SELECT *, "products".description FROM "warehouse"
