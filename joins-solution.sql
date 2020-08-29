@@ -10,12 +10,15 @@
 
 -- Which warehouses have cheetos?
   SELECT *, "products".description FROM "warehouse"
-  INNER JOIN "warehouse_product" ON "warehouse".id = "warehouse_product".warehouse_id
-  INNER JOIN "products" ON "warehouse_product".product_id = "products".id
+  INNER JOIN "warehouse_product"  ON "warehouse_product".warehouse_id = "warehouse".id
+  INNER JOIN "products" ON  "products".id = "warehouse_product".product_id
   WHERE "products".description = 'cheetos';
-
+ 
 -- Which warehouses have diet pepsi?
-
+  SELECT *, "products".description FROM "warehouse"
+  INNER JOIN "warehouse_product"  ON "warehouse_product".warehouse_id = "warehouse".id
+  INNER JOIN "products" ON  "products".id = "warehouse_product".product_id
+  WHERE "products".description = 'diet pepsi';
 
 -- Get the number of orders for each customer. NOTE: It is OK if those without orders are not included in results.
 
